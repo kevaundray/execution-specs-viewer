@@ -45,12 +45,12 @@ pub struct ForkSummary {
 
 // -- Page templates --
 
-/// Redirect index.html to the first fork pair's index page.
-pub fn render_index_page(pairs: &[ForkPairSummary]) -> String {
-    let target = if pairs.is_empty() {
+/// Redirect index.html to the latest fork's spec page.
+pub fn render_index_page(forks: &[ForkSummary]) -> String {
+    let target = if forks.is_empty() {
         "#".to_string()
     } else {
-        format!("{}/index.html", pairs[0].dir_name)
+        format!("{}/index.html", forks.last().unwrap().dir_name)
     };
     format!(
         "<!DOCTYPE html>\n\

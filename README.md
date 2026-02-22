@@ -13,7 +13,7 @@ Each Ethereum hard fork is implemented as a complete copy of the previous fork's
 ## Usage
 
 ```
-cargo run -p eth-spec-diff -- --config config.toml
+cargo run -- --config config.toml
 ```
 
 Then open `<output>/index.html` in a browser, or serve it:
@@ -114,7 +114,7 @@ CSS and JS are embedded in each page via `include_str!` so the output is fully s
 ## Tests
 
 ```
-cargo test -p eth-spec-diff
+cargo test
 ```
 
 Tests cover token extraction, semantic diffing (whitespace invariance, move detection), and HTML rendering.

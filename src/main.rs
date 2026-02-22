@@ -55,8 +55,8 @@ fn main() -> Result<()> {
     fs::create_dir_all(&config.output)
         .with_context(|| format!("creating output dir {}", config.output.display()))?;
 
-    // Write redirect index.
-    let index_html = site::render_index_page(&pair_summaries);
+    // Write redirect index (points to latest fork spec).
+    let index_html = site::render_index_page(&fork_summaries);
     let index_path = config.output.join("index.html");
     fs::write(&index_path, index_html)
         .with_context(|| format!("writing {}", index_path.display()))?;
