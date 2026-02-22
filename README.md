@@ -8,8 +8,6 @@ Each Ethereum hard fork is implemented as a complete copy of the previous fork's
 
 **Semantic diffing** means whitespace and formatting changes are ignored. The tool parses Python files with [tree-sitter](https://tree-sitter.github.io/tree-sitter/), extracts leaf tokens (skipping comments, whitespace, indent/dedent), and diffs the token sequences with [similar](https://docs.rs/similar). Two files that differ only in formatting produce an empty diff.
 
-**Move detection** means functions or classes that moved within a file but didn't change won't show up as diffs. Top-level definitions are matched by name before diffing their contents.
-
 ## Usage
 
 ```
@@ -82,34 +80,6 @@ Token kinds map to CSS classes for syntax coloring:
 - `@` -> `.decorator`
 
 Changed tokens within modified lines get `.tok-add` / `.tok-del` classes for inline highlighting.
-
-## Output structure
-
-```
-<output>/
-  index.html                              # redirects to first fork pair
-  frontier_to_homestead/
-    index.html                            # file tree + summary + fork pair dropdown
-    fork.py.html                          # individual file diff
-    vm/gas.py.html
-    ...
-  homestead_to_dao_fork/
-    ...
-```
-
-CSS and JS are embedded in each page via `include_str!` so the output is fully self-contained.
-
-## Module overview
-
-| Module | Purpose |
-|--------|---------|
-| `main.rs` | CLI, orchestrates the 5-phase pipeline |
-| `config.rs` | TOML config loading and path resolution |
-| `discover.rs` | Walks fork directories, pairs consecutive forks |
-| `parse.rs` | tree-sitter parsing, token extraction, block extraction |
-| `diff.rs` | Token-sequence diffing with block matching, line-level mapping |
-| `render.rs` | HTML diff table rendering with syntax highlighting |
-| `site.rs` | Page templates, file tree, fork pair dropdown, CSS/JS embedding |
 
 ## Tests
 
