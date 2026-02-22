@@ -1,6 +1,6 @@
 spec_root = "execution-specs/src/ethereum"
 output = "diff-output"
-source_url = "https://github.com/ethereum/execution-specs/blob/master/src/ethereum"
+source_url = "https://github.com/ethereum/execution-specs/blob/forks/amsterdam/src/ethereum"
 
 [[forks]]
 name = "Frontier"

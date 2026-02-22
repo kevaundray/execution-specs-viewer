@@ -1,0 +1,4 @@
+[submodule "execution-specs"]
+	path = execution-specs
+	url = https://github.com/ethereum/execution-specs.git
+	branch = forks/amsterdam
