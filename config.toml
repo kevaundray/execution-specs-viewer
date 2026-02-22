@@ -1,0 +1,98 @@
+spec_root = "execution-specs/src/ethereum"
+output = "diff-output"
+source_url = "https://github.com/ethereum/execution-specs/blob/master/src/ethereum"
+
+[[forks]]
+name = "Frontier"
+short_name = "frontier"
+path = "forks/frontier"
+
+[[forks]]
+name = "Homestead"
+short_name = "homestead"
+path = "forks/homestead"
+
+[[forks]]
+name = "DAO Fork"
+short_name = "dao_fork"
+path = "forks/dao_fork"
+
+[[forks]]
+name = "Tangerine Whistle"
+short_name = "tangerine_whistle"
+path = "forks/tangerine_whistle"
+
+[[forks]]
+name = "Spurious Dragon"
+short_name = "spurious_dragon"
+path = "forks/spurious_dragon"
+
+[[forks]]
+name = "Byzantium"
+short_name = "byzantium"
+path = "forks/byzantium"
+
+[[forks]]
+name = "Constantinople"
+short_name = "constantinople"
+path = "forks/constantinople"
+
+[[forks]]
+name = "Istanbul"
+short_name = "istanbul"
+path = "forks/istanbul"
+
+[[forks]]
+name = "Muir Glacier"
+short_name = "muir_glacier"
+path = "forks/muir_glacier"
+
+[[forks]]
+name = "Berlin"
+short_name = "berlin"
+path = "forks/berlin"
+
+[[forks]]
+name = "London"
+short_name = "london"
+path = "forks/london"
+
+[[forks]]
+name = "Arrow Glacier"
+short_name = "arrow_glacier"
+path = "forks/arrow_glacier"
+
+[[forks]]
+name = "Gray Glacier"
+short_name = "gray_glacier"
+path = "forks/gray_glacier"
+
+[[forks]]
+name = "Paris"
+short_name = "paris"
+path = "forks/paris"
+
+[[forks]]
+name = "Shanghai"
+short_name = "shanghai"
+path = "forks/shanghai"
+
+[[forks]]
+name = "Cancun"
+short_name = "cancun"
+path = "forks/cancun"
+
+[[forks]]
+name = "Prague"
+short_name = "prague"
+path = "forks/prague"
+
+[[forks]]
+name = "Osaka"
+short_name = "osaka"
+path = "forks/osaka"
+
+[[forks]]
+name = "Amsterdam"
+short_name = "amsterdam"
+path = "forks/amsterdam"

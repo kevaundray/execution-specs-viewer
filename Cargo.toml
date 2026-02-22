@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "crates/eth-spec-diff",
+]
+resolver = "2"
